@@ -36,7 +36,7 @@ class serviceTest {
 
     }
     @Test
-    public void 중복제거(){
+    public void 중복제거임(){
         member m1= new member();
         m1.setName("1");
         member m2= new member();
