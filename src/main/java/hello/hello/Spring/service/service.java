@@ -2,6 +2,7 @@ package hello.hello.Spring.service;
 
 import hello.hello.Spring.domain.member;
 import hello.hello.Spring.repository.memoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -10,7 +11,7 @@ import java.util.Optional;
 public class service {
 
     private final memoryMemberRepository memberRepository;
-
+    @Autowired
     public service(memoryMemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
