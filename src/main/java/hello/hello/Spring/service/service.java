@@ -8,8 +8,12 @@ import java.util.List;
 import java.util.Optional;
 @Service
 public class service {
-    private final memoryMemberRepository memberRepository=new memoryMemberRepository();
 
+    private final memoryMemberRepository memberRepository;
+
+    public service(memoryMemberRepository memberRepository) {
+        this.memberRepository = memberRepository;
+    }
 
     //    회원 가입
     public Long join(member m1){
