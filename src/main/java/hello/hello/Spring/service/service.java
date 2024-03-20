@@ -2,14 +2,19 @@ package hello.hello.Spring.service;
 
 import hello.hello.Spring.domain.member;
 import hello.hello.Spring.repository.memoryMemberRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Optional;
-@Service
-public class service {
-    private final memoryMemberRepository memberRepository=new memoryMemberRepository();
 
+public class service {
+    private final memoryMemberRepository memberRepository;
+
+
+    public service(memoryMemberRepository memberRepository) {
+        this.memberRepository= memberRepository;
+    }//DI :의존성 주입
 
     //    회원 가입
     public Long join(member m1){

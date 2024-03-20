@@ -10,10 +10,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class serviceTest {
-    service service= new service();
-    memoryMemberRepository memberRepository= new memoryMemberRepository();
+    service service;
+    memoryMemberRepository memberRepository;
     @BeforeEach
     public void beforeEach(){
+        service= new service(memberRepository=new memoryMemberRepository());
 
 
     }
