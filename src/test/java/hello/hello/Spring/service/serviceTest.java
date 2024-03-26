@@ -51,7 +51,7 @@ class serviceTest {
 //           Assertions.assertEquals(e.getMessage(),"이미 존재하는 회원입니다.");
 //       }  이게 방법 1
         IllegalStateException result = assertThrows(IllegalStateException.class, ()->{service.join(m2);});
-        Assertions.assertEquals(result.getMessage(),"이미 존재하는 회원입니다.");
+        Assertions.assertEquals(result.getMessage(),"이미 존재하는 회원입니다!.");
 
 
 
