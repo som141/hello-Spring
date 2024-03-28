@@ -30,5 +30,7 @@ public class SpringConfig {
 //        return new memoryMemberRepository();
 //        return new JTRepository(dataSource);
         return new JpaRepository(entityManager);
+//        다형성 구현에서   SOLID원칙을 지키기 위해 SPRING 에서 고안한 방법.
+//        서비스에서 인터페이스 자체만 의존시키고 그 구현체의 연결은 spring에서 처리!
     }
 }
